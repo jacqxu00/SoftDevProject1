@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='foundation.css')}}">
+	<link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='app.css')}}">
+	<title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<div class="grid-x grid-padding-x" style="padding-top: 20px;">
+<div class="large-12 cell">
+<div class="callout">
+  <br><br>
+  <center><h1>Presenting the Presence of Presents in the Present</h1></center>
+  <br><br>
+  <center>
+     <flm2>
+      {% set messages = get_flashed_messages() %}
+      {% for message in messages %}
+{{ message }}
+      {% endfor %}
+</flm2>
+    </center>
+    
+<div class="grid-x grid-padding-x">
+      <div class="large-6 cell">
+	<h3 align="center">LOGIN</h3><hr>
+      <form action="/login" method="POST">
+	<label>USERNAME:
+	  <input name="usr" type="text">
+	</label>
+	<label>PASSWORD:
+	  <input name="pwd" type="PASSWORD">
+	</label> <br>
+	<div class="text-center">
+	  <input type="submit" class="button success" name="type" value="Login">
+	</div>
+      </form>
+</div>
+
+
+      <div class="large-6 cell">
+      	<h3 align="center">SIGNUP</h3><hr>
+      <form action="/login" method="POST">
+	<label>USERNAME:
+	  <input name="usr" type="text">
+	</label>
+	<label>FULL NAME:
+	  <input name="name" type="text">
+	</label>
+	<label>PASSWORD:
+	  <input name="pwd" type="PASSWORD">
+	</label>
+		<label>CONFIRM PASSWORD:
+	  <input name="pwd2" type="PASSWORD">
+	</label> <br>
+	<div class="text-center">
+	  <input type="submit" class="button alert" name="type" value="Signup">
+	</div>
+      </form>
+</div></div>      
+
+</body>
+</html>

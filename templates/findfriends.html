@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="grid-x grid-padding-x">
+<div class="large-12 cell">
+<div class="callout">
+<h1> Welcome! </h1>
+<p>Find your friends and respond to friend requests!</p>
+
+<div class="grid-x grid-padding-x">
+<div class="large-6 medium-6 cell">
+<div class="callout">
+		<h3>Search for Friends</h3>
+
+	<form method="POST" action="/friends">
+	Search: <input type="text" name="name"><br>
+	<input type="submit" value="Submit" class="button">
+	</form>
+</div>
+	<br><br>
+
+	{% for each in stranger %}
+		{{stranger[each][0]}} ({{each}}) <br>
+		Age: {{stranger[each][1]}} <br>
+		Gender: {{stranger[each][2]}} <br>
+		Hobbies: {{stranger[each][3]}}<br>
+		<form method="POST" action="/friends">
+			<button name="person" type="submit" value="{{each}}">Send Friend Request</button><br><br><br>
+		</form>
+	{% endfor %}
+	<br>
+
+</div>
+<div class="large-6 medium-6 cell">
+<div class="callout">
+<h3> Friend Requests </h3>
+<p>Your Friend Requests are listed below:</p>
+<table>
+	{% for each in fr %}
+		<tr>
+			<td>
+			{{fr[each][0]}} ({{each}})
+			</td>
+			<td>
+				<form method="POST" action="/friends">
+				<button name="person" type="submit" value="{{each}}">Accept</button><br>
+				</form>
+			</td>
+		</tr>
+	{% endfor %}
+</table>
+</div>
+</div>
+{% endblock %}

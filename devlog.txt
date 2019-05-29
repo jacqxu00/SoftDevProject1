@@ -1,0 +1,75 @@
+xuJ — 2017-11-17 14:04
+	setup the repo with folders and files needed
+	setup the main setup python code for db and routing
+
+jonesR — 2017-11-21 14:42
+	finished python for login, logout, and create_user
+	finished html for login page, but not yet connected to standard header page
+
+korsunM - 2017-11-21 14:33
+	Created some api functionality with lookups
+
+xuJ - 2017-11-21 14:44
+	wrote code for standard header
+
+xuJ - 2017-11-22 14:44
+	added in data structures for user information to be displayed in the header
+
+korsunM - 2017-11-25 18:29
+	Created a method to return a link to a youtube video
+
+xuJ - 2017-11-27 14:06
+	created my_data data structure for all of user data and implemented into edit.html
+	initialized data structures from /login and /create_user routes
+
+xuJ - 2017-11-27 14:42
+	added in everything to the /edit route 
+	finished with index.html
+
+korsunM - 2017-11-28 00:42
+	finished api implementation, however it is imperfect.
+	HTML needs to be frameworkified
+	API based code needs testings
+
+xuJ - 2017-11-28 00:56
+	finished with data structures for friends and requests for every route
+	added in conditionals for index.html and edit.html
+	
+parkP - 2017-11-28 04:12
+	added more to initialize_fnfr() method in presents.py
+	finished with findfriends.html
+	finished the friends route in presents.py but couldn't test it
+	completed profile.html except for product section
+	finished the profileroute in presents.py but couldn't test it
+
+korsunM - 2017-11-28 14:30
+	Re-added code to add() and product()
+	Removed usage of sessions for products to work with wishlist
+
+xuJ - 2017-11-28 14:39
+	added in sample data in db.py
+
+jonesR - 2017-11-28 14:50
+	finally got login to work well with db.py
+
+korsunM - 2017-11-28 23:36
+	fixed database errors
+	addwish.html now works
+
+jonesR - 2017-11-29 01:30
+	added flashes for login and logout
+
+xuJ - 2017-11-29 03:15
+	small bugs
+	fixed /edit route so that it would display the current data and updated data
+
+jonesR - 2017-11-29 05:11
+	added Foundation elements
+
+xuJ - 2017-11-30 00:57
+	lots of data structure changes to debug initialize_fnfr()
+	now index.html is fully functional
+
+xuJ - 2017-11-30 02:38
+	tried to fix the bugs in Philip’s part for him (findfriends and profile) but this is too much for one person :(
+	just got friend requests to display, but can’t friend people and profile not working

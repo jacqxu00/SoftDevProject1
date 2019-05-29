@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='foundation.css')}}">
+	<link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='app.css')}}">
+	<title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+	
+	<div class="top-bar">
+	    <div class="top-bar-section">
+	    	<ul class="dropdown menu" data-dropdown-menu>
+	    						<li><a href="{{ url_for('index') }}">Home</a></li>
+
+	    		<li>
+					<a href="{{ url_for('findfriends') }}">Find Friends</a>
+				</li>
+				<li><a href="{{ url_for('profile') }}">My List</a></li>
+			</ul>
+		</div>
+	    <div class="top-bar-right">
+			<ul class="dropdown menu" data-dropdown-menu>
+				<li><a href="{{ url_for('edit') }}">Update Profile</a></li>
+				<li><a href="{{ url_for('logout') }}">Log Out</a></li>
+			</ul>
+		</div>
+	</div>
+     <center>
+     <flm2>
+      {% set messages = get_flashed_messages() %}
+      {% for message in messages %}
+{{ message }}
+      {% endfor %}
+</flm2>
+    </center>
+    
+	{% block body %}
+
+    {% endblock %}
+
+</body>
+</html>
